@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+
+body{
+    font-family: Montserrat;
+    padding: 1px;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #153677, #4e085f) ;
+    
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #153677;
+}
+.todo-container{
+    background-color: whitesmoke;
+    width: 600px;
+    min-height: 100px;
+    max-height: auto;
+    height: auto;
+    margin: 100px auto 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.todo-container h2{
+    text-align: center;
+}
+.todo-container img{
+    width: 40px;
+}
+.todo-container .head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.todo-input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3d3d3;
+    height: 50px;
+    border-radius: 30px;
+}
+.todo-input-container input{
+    border: none;
+    padding: 5px;
+    width: 400px;
+    background: transparent;
+    outline: none;
+    font-size: 17px;
+    border-radius: 30px;
+    max-height: 25px;
+    margin-left: 20px;
+}
+.todo-input-container button{
+    width: 100px;
+    height: 50px;
+    padding: 7px 10px;
+    font-size: 20px;
+    background-color: #ff3b3f;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.todo-list-container button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 2px;
+}
+.todo-list-container button img{
+    width: 20px;
+}
+.todo-list-container,
+.todo-input-container {
+    width: 550px;
+    margin: 30px auto 20px;
+}
+.todo-list-container .todo-value{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: 10px;
+    place-items: center;
+    justify-self: end;
+    width: 100%;
+    font-weight: 500;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    justify-content: left;
+    width: 100%;
+}
+.checkbox-value{
+    justify-self: start;
+}
+.checkbox-value{
+    justify-self: start;
+}
+.line-through {
+    text-decoration: line-through;
+}
+.checkbox-value{
+    transform: scale(1.4);
+}
