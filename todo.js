@@ -2,10 +2,7 @@ import {incompleteToDoList, saveToLocalStorage, removeToDo} from './incompleteTo
 
 
 function renderTodoList(){
-    let todoTextHTML = '';
-    
-        incompleteToDoList.forEach((todo)=>{
-            todoTextHTML += `<div class="todo-value ">
+    const todoTextHTML = incompleteToDoList.map((todo) => {return `<div class="todo-value ">
                         <div class="text-container">
                         <input type="checkbox" ${todo.completed ? 'checked' : ''} class="js-checkbox-value checkbox-value" data-checkbox-id="${todo.id}">
                         <div class="value ${todo.completed ? 'line-through' : ''} text-${todo.id}">${todo.text}</div>
@@ -13,9 +10,20 @@ function renderTodoList(){
                         <button class="js-delete-btn" data-todo-id="${todo.id}"><img src="images/cancel.png" alt=""></button>
                     </div>
                     
-                    `
+                    `}).join('');
+    
+        // incompleteToDoList.forEach((todo)=>{
+        //     todoTextHTML += `<div class="todo-value ">
+        //                 <div class="text-container">
+        //                 <input type="checkbox" ${todo.completed ? 'checked' : ''} class="js-checkbox-value checkbox-value" data-checkbox-id="${todo.id}">
+        //                 <div class="value ${todo.completed ? 'line-through' : ''} text-${todo.id}">${todo.text}</div>
+        //                 </div>
+        //                 <button class="js-delete-btn" data-todo-id="${todo.id}"><img src="images/cancel.png" alt=""></button>
+        //             </div>
                     
-        })
+        //             `
+                    
+        // })
         document.querySelector('.js-todo-list-container').innerHTML = todoTextHTML;
 
         document.querySelectorAll('.js-delete-btn').forEach((button)=>{
