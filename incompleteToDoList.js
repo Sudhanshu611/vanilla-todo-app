@@ -1,5 +1,19 @@
+export class Todo {
+    constructor(text){
+        this.id = Date.now();
+        this.text = text;
+        this.completed = false;
+    }
 
-export let incompleteToDoList = JSON.parse(localStorage.getItem('todo')) || [];
+    toggleComplete(){
+        this.completed = !this.completed;
+    }
+
+    className(){
+        return this.completed ? 'line-through' : '';
+    }
+}
+export let incompleteToDoList = (JSON.parse(localStorage.getItem('todo')) || []);
 
 export function print(){
     console.log(incompleteToDoList);
