@@ -113,3 +113,26 @@ body{
 .checkbox-value{
     transform: scale(1.4);
 }
+
+nav{
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    /* width: 400px; */
+    margin: 0 auto;
+    /* gap: 20px; */
+}
+nav button{
+    font-family: Montserrat;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+nav button:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
