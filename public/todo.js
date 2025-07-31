@@ -1,4 +1,4 @@
-import {incompleteToDoList, saveToLocalStorage, removeToDo, Todo} from './incompleteToDoList.js'
+const {incompleteToDoList, saveToLocalStorage, removeToDo, Todo} = require('./incompleteToDoList.js')
 
 
 function renderTodoList(){
@@ -9,7 +9,7 @@ function renderTodoList(){
                         <input type="checkbox" ${todo.completed ? 'checked' : ''} class="js-checkbox-value checkbox-value" data-checkbox-id="${todo.id}">
                         <div class="value ${todo.completed ? 'line-through' : ''} text-${todo.id}">${todo.text}</div>
                         </div>
-                        <button class="js-delete-btn" data-todo-id="${todo.id}"><img src="images/cancel.png" alt=""></button>
+                        <button class="js-delete-btn" data-todo-id="${todo.id}"><img src="../images/cancel.png" alt=""></button>
                         </div>
                     `}).join('');
     document.querySelector('.js-todo-list-container').innerHTML = todoTextHTML;

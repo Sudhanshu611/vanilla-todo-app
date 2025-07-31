@@ -1,4 +1,4 @@
-export class Todo {
+class Todo {
     constructor(text){
         this.id = Date.now();
         this.text = text;
@@ -13,17 +13,17 @@ export class Todo {
         return this.completed ? 'line-through' : '';
     }
 }
-export let incompleteToDoList = (JSON.parse(localStorage.getItem('todo')) || []);
+let incompleteToDoList = (JSON.parse(localStorage.getItem('todo')) || []);
 
-export function print(){
+function print(){
     console.log(incompleteToDoList);
 }
 
-export function saveToLocalStorage(){
+function saveToLocalStorage(){
     localStorage.setItem('todo', JSON.stringify(incompleteToDoList));
 }
 
-export function removeToDo(id){
+function removeToDo(id){
     let newTodo =[];
     incompleteToDoList.forEach((todo) => {
         if (todo.id !== id){
@@ -35,3 +35,10 @@ export function removeToDo(id){
     console.log(incompleteToDoList);
     saveToLocalStorage(); 
 }
+
+modeule.exports = {
+    incompleteToDoList,
+    saveToLocalStorage,
+    removeToDo,
+    Todo
+};
